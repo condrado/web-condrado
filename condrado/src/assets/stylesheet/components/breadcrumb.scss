@@ -1,0 +1,36 @@
+.crr-breadcrumb {
+
+  ol, ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+  }
+
+  li {
+    font-size: .7rem;
+    padding: 0;
+
+    &:after {
+      content: ">";
+      padding: 0 .3rem;
+      display: inline-block;
+    }
+
+    &:last-child {
+      &:after {
+        content: "";
+      }
+    }
+  }
+
+  &__link,
+  &__text {
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  &__text {
+
+  }
+}

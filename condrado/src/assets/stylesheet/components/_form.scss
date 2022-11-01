@@ -1,0 +1,426 @@
+///
+/// Hyperspace by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Form */
+
+	.crr-form {
+		margin: 0 0 _size(element-margin) 0;
+
+		> :last-child {
+			margin-bottom: 0;
+		}
+
+		> .fields {
+			$gutter: (_size(element-margin) * 0.75);
+
+			@include vendor('display', 'flex');
+			@include vendor('flex-wrap', 'wrap');
+			width: calc(100% + #{$gutter * 2});
+			margin: ($gutter * -1) 0 _size(element-margin) ($gutter * -1);
+
+			> .field {
+				@include vendor('flex-grow', '0');
+				@include vendor('flex-shrink', '0');
+				padding: $gutter 0 0 $gutter;
+				width: calc(100% - #{$gutter * 1});
+
+				&.half {
+					width: calc(50% - #{$gutter * 0.5});
+				}
+
+				&.third {
+					width: calc(#{100% / 3} - #{$gutter * (1 / 3)});
+				}
+
+				&.quarter {
+					width: calc(25% - #{$gutter * 0.25});
+				}
+			}
+		}
+
+		@include breakpoint('<=xsmall') {
+			> .fields {
+				$gutter: (_size(element-margin) * 0.75);
+
+				width: calc(100% + #{$gutter * 2});
+				margin: ($gutter * -1) 0 _size(element-margin) ($gutter * -1);
+
+				> .field {
+					padding: $gutter 0 0 $gutter;
+					width: calc(100% - #{$gutter * 1});
+
+					&.half {
+						width: calc(100% - #{$gutter * 1});
+					}
+
+					&.third {
+						width: calc(100% - #{$gutter * 1});
+					}
+
+					&.quarter {
+						width: calc(100% - #{$gutter * 1});
+					}
+				}
+			}
+		}
+
+    .row {
+      margin-top: 1.5rem;
+
+      &:first-child {
+        margin-top: 0;
+
+        > div {
+          padding-top: 0;
+        }
+      }
+    }
+
+    &__copy {
+      cursor: pointer;
+      overflow: hidden;
+
+
+    }
+
+    textarea {
+      &.crr-form__copy {
+        min-height: 3.2rem;
+      }
+    }
+
+    &--full {
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      left: 0;
+      top: 0;
+      z-index: 99;
+      background-color: _palette(accent4);
+
+      + a.icon-resize-full {
+        position: fixed;
+        z-index: 100;
+        top: 0;
+
+        &:before {
+          content: '\e84e';
+        }
+      }
+    }
+
+    .icon-resize-full {
+      position: absolute;
+      right: 0;
+      top: 1.6rem;
+      text-decoration: none;
+      width: 2.5rem;
+      height: 2.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .icon-cog {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      text-decoration: none;
+      width: 2.5rem;
+      height: 2.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__fieldset {
+      display: none;
+
+      &--copy {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        left: 0;
+        top: 0;
+        overflow: hidden;
+
+        textarea {
+          border: 0;
+          background-color: transparent;
+        }
+      }
+
+      &--active {
+        display: block;
+      }
+    }
+
+    &__btn-new {
+
+    }
+
+    &__btn-copy {
+      align-self: flex-end;
+    }
+
+    &__btn-box {
+      display: flex;
+      margin-bottom: 2rem;
+      justify-content: space-between;
+
+      &.actions {
+        justify-content: flex-end;
+        align-items: flex-end;
+        height: 100%;
+      }
+
+      &--left {
+        input[type="button"] {
+          margin-right: 1rem;
+        }
+      }
+
+      &--right {
+        input[type="button"] {
+          margin-left: 1rem;
+        }
+      }
+    }
+
+    &__checkbox {
+      display: flex;
+      align-items: flex-end;
+      min-height: 4.25rem;
+
+      input[type=checkbox] {
+        margin-right: 0;
+        width: 0;
+
+        &:checked {
+          + label {
+
+            &:before {
+              font-size: 1.125rem;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+          }
+        }
+
+        + label {
+          height: 2.75rem;
+          padding-left: 3.2rem;
+          display: flex;
+          align-items: center;
+
+          &:before {
+            width: 2.75rem;
+            height: 2.75rem;
+          }
+        }
+      }
+    }
+
+    .crr-form__btn-action {
+      padding: 0;
+      min-width: 2.875rem;
+      height: 2.875rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+    }
+	}
+
+	label {
+		color: _palette(gre-11);
+		font-weight: _font(ligth);
+		line-height: 1.5;
+		margin: 0;
+		display: block;
+		font-size: 1rem;
+    position: relative;
+	}
+
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	input[type="tel"],
+  input[type="file"],
+	select,
+	textarea {
+		@include vendor('appearance', 'none');
+		background: _palette(border-bg);
+		border-radius: _size(border-radius);
+		border: solid _size(border-width) _palette(border);
+		color: _palette(gre-11);
+		display: block;
+		outline: 0;
+		padding: 0 1rem;
+		text-decoration: none;
+		width: 100%;
+
+
+		&:invalid {
+			box-shadow: none;
+		}
+
+		&:focus {
+			border-color: _palette(fg-bold);
+			box-shadow: 0 0 0 _size(border-width) _palette(fg-bold);
+		}
+	}
+
+  input::-webkit-input-placeholder { /* WebKit browsers */
+    line-height: 1.5em;
+  }
+  input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    line-height: 1.5em;
+  }
+  input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    line-height: 1.5em;
+  }
+  input:-ms-input-placeholder { /* Internet Explorer 10+ */
+    line-height: 1.5em;
+  }
+
+	select {
+		background-image: svg-url("<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' preserveAspectRatio='none' viewBox='0 0 40 40'><path d='M9.4,12.3l10.4,10.4l10.4-10.4c0.2-0.2,0.5-0.4,0.9-0.4c0.3,0,0.6,0.1,0.9,0.4l3.3,3.3c0.2,0.2,0.4,0.5,0.4,0.9 c0,0.4-0.1,0.6-0.4,0.9L20.7,31.9c-0.2,0.2-0.5,0.4-0.9,0.4c-0.3,0-0.6-0.1-0.9-0.4L4.3,17.3c-0.2-0.2-0.4-0.5-0.4-0.9 c0-0.4,0.1-0.6,0.4-0.9l3.3-3.3c0.2-0.2,0.5-0.4,0.9-0.4S9.1,12.1,9.4,12.3z' fill='#{_palette(border)}' /></svg>");
+		background-size: 1.25rem;
+		background-repeat: no-repeat;
+		background-position: calc(100% - 1rem) center;
+		height: _size(element-height);
+		padding-right: _size(element-height);
+		text-overflow: ellipsis;
+
+		option {
+			color: _palette(gre-11);
+			background: _palette(bg);
+		}
+
+		&:focus {
+			&::-ms-value {
+				background-color: transparent;
+			}
+		}
+
+		&::-ms-expand {
+			display: none;
+		}
+	}
+
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+  input[type="file"],
+	select {
+		height: _size(element-height);
+	}
+
+  input[type="file"] {
+    padding: .6rem 0 .6rem .6rem;
+  }
+
+	textarea {
+		padding: 0.75rem 1rem;
+
+		body.is-ie & {
+			min-height: 10rem;
+		}
+	}
+
+	input[type="checkbox"],
+	input[type="radio"], {
+		@include vendor('appearance', 'none');
+		display: block;
+		float: left;
+		margin-right: -2rem;
+		opacity: 0;
+		width: 1rem;
+		z-index: -1;
+
+		& + label {
+			@include icon(false, solid);
+			color: _palette(gre-11);
+			cursor: pointer;
+			display: inline-block;
+			font-size: 1rem;
+			font-weight: _font(ligth);
+			padding-left: (_size(element-height) * 0.6) + 0.75rem;
+			padding-right: 0.75rem;
+			position: relative;
+
+			&:before {
+				background: _palette(border-bg);
+				border-radius: _size(border-radius);
+				border: solid _size(border-width) _palette(border);
+				content: '';
+				display: inline-block;
+				font-size: 0.8rem;
+				height: (_size(element-height) * 0.75);
+				left: 0;
+				line-height: (_size(element-height) * 0.75);
+				position: absolute;
+				text-align: center;
+				top: 0;
+				width: (_size(element-height) * 0.75);
+			}
+		}
+
+		&:checked + label {
+			&:before {
+        font-family: icon-font;
+				background: _palette(fg-bold);
+				border-color: _palette(fg-bold);
+				color: _palette(gre-11);
+				content: '\e813';
+			}
+		}
+
+		&:focus + label {
+			&:before {
+				border-color: _palette(fg-bold);
+				box-shadow: 0 0 0 _size(border-width) _palette(fg-bold);
+			}
+		}
+	}
+
+	input[type="checkbox"] {
+		& + label {
+			&:before {
+				border-radius: _size(border-radius);
+			}
+		}
+	}
+
+	input[type="radio"] {
+		& + label {
+			&:before {
+				border-radius: 100%;
+			}
+		}
+	}
+
+	::-webkit-input-placeholder {
+		color: _palette(gre-11) !important;
+		opacity: 1.0;
+	}
+
+	:-moz-placeholder {
+		color: _palette(gre-11) !important;
+		opacity: 1.0;
+	}
+
+	::-moz-placeholder {
+		color: _palette(gre-11) !important;
+		opacity: 1.0;
+	}
+
+	:-ms-input-placeholder {
+		color: _palette(gre-11) !important;
+		opacity: 1.0;
+	}

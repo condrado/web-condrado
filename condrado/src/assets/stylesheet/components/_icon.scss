@@ -1,0 +1,81 @@
+///
+/// Hyperspace by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Icon */
+
+	.icon {
+		@include icon;
+		border-bottom: none;
+		position: relative;
+
+		> .label {
+			display: none;
+		}
+
+		&:before {
+			line-height: inherit;
+		}
+
+		&.solid {
+			&:before {
+				font-weight: 900;
+			}
+		}
+
+		&.brands {
+			&:before {
+				font-family: 'Font Awesome 5 Brands';
+			}
+		}
+
+		&.major {
+			width: 2.5rem;
+			height: 2.5rem;
+			display: block;
+			background: _palette(fg-bold);
+			border-radius: 100%;
+			color: _palette(gre-11);
+			text-align: center;
+			line-height: 2.5rem;
+			margin: 0 0 (_size(element-margin) * 0.65) 0;
+
+			&:before {
+				font-size: 1.25rem;
+
+				.wrapper.style1 & {
+					color: _palette(gre-11);
+				}
+
+				.wrapper.style1-alt & {
+					color: _palette(gre-11);
+				}
+
+				.wrapper.style2 & {
+					color: _palette(gre-11);
+				}
+
+				.wrapper.style2-alt & {
+					color: _palette(gre-11);
+				}
+
+				.wrapper.style3 & {
+					color: _palette(gre-11);
+				}
+
+				.wrapper.style3-alt & {
+					color: _palette(gre-11);
+				}
+
+        .wrapper.style4 & {
+          color: _palette(gre-11);
+        }
+
+        .wrapper.style4-alt & {
+          color: _palette(gre-11);
+        }
+			}
+		}
+	}

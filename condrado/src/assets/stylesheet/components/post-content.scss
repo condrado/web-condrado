@@ -1,0 +1,22 @@
+.crr-post-content {
+  &__figure {
+    width: 100%;
+    overflow: hidden;
+    max-height: 10rem;
+    margin-bottom: 2rem;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: calc(100% - 200px);
+      right: 0;
+      top: 0;
+    }
+  }
+
+  &__img {
+
+  }
+}

@@ -1,0 +1,262 @@
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+
+    &___container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        opacity: 1;
+        -webkit-transition: opacity 0.5s ease;
+        -moz-transition: opacity 0.5s ease;
+        -o-transition: opacity 0.5s ease;
+        transition: opacity 0.5s ease;
+
+        @include tablet-s {
+            width: auto;
+            height: auto;
+        }
+
+        &:hover {
+            .card__tags {
+                @include tablet-s {
+                    position: absolute !important;
+                    right: rem(-158);
+                    -webkit-transition: right 0.5s ease;
+                    -moz-transition: right 0.5s ease;
+                    -o-transition: right 0.5s ease;
+                    transition: right 0.5s ease;
+                }
+            }
+        }
+
+        &.hide-card {
+            opacity: 0;
+            -webkit-transition: opacity 0.5s ease;
+            -moz-transition: opacity 0.5s ease;
+            -o-transition: opacity 0.5s ease;
+            transition: opacity 0.5s ease;
+        }
+    }
+
+    &__title {
+        margin-bottom: 1rem;
+        max-width: rem(200);
+        height: auto;
+
+        &-img{
+            height: auto;
+            width: 100%;
+            color: $color-white;
+            margin: 0;
+            padding:0.5rem 1rem;
+        } 
+    }
+
+    &__figure {
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        border-radius: 50%;
+        width: rem(160);
+        height: rem(160);
+        margin: rem(80) auto 0;
+        border: 5px solid $color-white;
+        box-sizing: revert;
+    }
+
+    &__photo {
+
+    }
+
+    &__heading {
+        font-size: 150%;
+        padding:1.5rem;
+        margin:0;
+        text-align: center;
+        position: relative;
+
+        &::after {
+            content: "";
+            -webkit-box-shadow: 0px 32px 51px -33px rgba(0,0,0,0.33);
+            -moz-box-shadow: 0px 32px 51px -33px rgba(0,0,0,0.33);
+            box-shadow: 0px 32px 51px -33px rgba(0,0,0,0.33);
+            position: absolute;
+            width: 80%;
+            height: rem(76);
+            left: 10%;
+            top: 0;
+            z-index: 1;
+        }
+    }
+
+    &__content {
+        max-height: rem(459);
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        &::-webkit-scrollbar-track {
+            -webkit-box-shadow: none;
+            border-radius: 10px;
+            background-color: var(--black);
+            margin: rem(10) 0;
+        }
+        
+        &::-webkit-scrollbar {
+            background-color: var(--black);
+            width: rem(8);
+        }
+        
+        &::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+            background-color: var(--white);
+        }
+    }
+
+    &__overview {
+        background-color: $color-white;
+        box-shadow: 0 0 12px 0 rgba(0,0,0,0.1), 0 10px 25px 0 rgba(0,0,0,0.2);
+        width: 100%;
+        position: relative;
+        overflow-y: auto;
+        overflow-x: hidden;
+        z-index: 2;
+        height: 100vh;
+
+        @include tablet-s {
+            height: 75vh;
+            width: rem(480);
+            max-height: rem(610);
+        }
+    }
+
+    &__page {
+        position: absolute;
+        background-color: $color-white;
+        width: inherit;
+        overflow: hidden;
+        -webkit-transition: opacity 0.5s ease;
+        -moz-transition: opacity 0.5s ease;
+        -o-transition: opacity 0.5s ease;
+        transition: opacity 0.5s ease;
+        z-index: 0;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: rem(610);
+
+        &.active {
+            //left: 0;
+            opacity: 1;
+            -webkit-transition: opacity 0.5s ease;
+            -moz-transition: opacity 0.5s ease;
+            -o-transition: opacity 0.5s ease;
+            transition: opacity 0.5s ease;
+            z-index: 1;
+        }
+    }
+
+    &__text {
+        padding: 0 1.5rem rem(15);
+        text-align: center;
+        margin: 0;;
+    }
+
+    &__tags {
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        background-color: $color-white;
+        padding: 0;
+        border: 1px solid $color-white;
+        z-index: 2;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        margin: 0 auto;
+        justify-content: center;
+        
+        @include tablet-s {
+            -webkit-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+            -webkit-transition: right 0.5s ease;
+            -moz-transition: right 0.5s ease;
+            -o-transition: right 0.5s ease;
+            transition: right 0.5s ease;
+            top: rem(119);
+            right: rem(-118);
+            bottom: auto;
+            z-index: 1;
+            width: auto;
+        }
+    }
+
+    &__tag {
+        &-link {
+            padding: rem(10) rem(20);
+            text-decoration: none;
+            display: block;
+        }
+    }
+
+    &__footer{
+        padding: rem(16);
+        font-size: 80%;
+        text-align: center;
+        align-self: flex-end;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin-bottom: rem(41);
+
+        @include tablet-s {
+            margin: 0;
+        }
+
+        &::after {
+            content: "";
+            -webkit-box-shadow: 0px -32px 51px -33px rgba(0,0,0,0.33);
+            -moz-box-shadow: 0px -32px 51px -33px rgba(0,0,0,0.33);
+            box-shadow: 0px -32px 51px -33px rgba(0,0,0,0.33);
+            position: absolute;
+            width: 80%;
+            height: rem(76);
+            left: 10%;
+            top: 0;
+            z-index: 1;
+        }
+
+        .c-btn {
+            position: relative;
+            z-index: 2;
+        }
+    }
+
+    &__section {
+        height: calc(100% - 75px);
+        padding: rem(76) rem(16) 0 rem(16);
+
+        .card__heading {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: $color-white;
+        }
+    }
+}

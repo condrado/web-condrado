@@ -1,0 +1,15 @@
+# File Options
+files:
+  include: 'src/**/*.s+(a|c)ss'
+  ignore: 'src/assets/stylesheets/vendor/**/*.*'
+# Rules
+rules:
+  class-name-format:
+    - allow-leading-underscore: true
+    - convention: hyphenatedbem
+  mixins-before-declarations:
+    - 1
+    - exclude: ['tablet', 'desktop']
+  nesting-depth:
+    - 1
+    - max-depth: 3

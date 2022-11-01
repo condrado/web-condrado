@@ -1,0 +1,27 @@
+{{#> layouts/layout-base title="Index" }}
+
+  {{#*inline "head"}}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../assets/css/app.css">
+  {{/inline}}
+
+  {{#*inline "main"}}
+    {{> modules/post-content }}
+  {{/inline}}
+
+  {{#*inline "footer"}}
+    {{> modules/footer}}
+  {{/inline}}
+
+
+  {{#*inline "scripts"}}
+    <script src="../assets/javascript/libs/jquery.min.js"></script>
+    <script src="../assets/javascript/libs/jquery.scrollex.min.js"></script>
+    <script src="../assets/javascript/libs/jquery.scrolly.min.js"></script>
+    <script src="../assets/javascript/libs/browser.min.js"></script>
+    <script src="../assets/javascript/libs/breakpoints.min.js"></script>
+    <script src="../assets/javascript/app.js"></script>
+  {{/inline}}
+
+{{/ layouts/layout-base }}

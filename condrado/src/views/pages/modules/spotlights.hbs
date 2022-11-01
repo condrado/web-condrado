@@ -1,0 +1,17 @@
+<section id="{{listPost.id}}" class="crr-spotlights wrapper">
+  <h2 class="crr-spotlights__title">{{listPost.title}}</h2>
+  {{#each listPost.list}}
+    <section class="crr-spotlights__item">
+      <a href="{{hrefLink}}" class="image"><img src="{{src}}" alt="{{title}}" data-position="center center" /></a>
+      <div class="content">
+        <div class="inner">
+          <h3>{{title}}</h3>
+          <p>{{text}}</p>
+          <ul class="actions">
+            <li><a href="{{hrefAction}}" class="button">{{textAction}}</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  {{/each}}
+</section>

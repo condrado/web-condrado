@@ -1,0 +1,194 @@
+{
+  "sidebar": [
+    {
+      "position": "1",
+      "title": "Bienvenido",
+      "href": "#intro",
+      "linkTitle": "Bienvenido",
+      "isPost": false
+    },
+    {
+      "position": "2",
+      "title": "Casos prácticos",
+      "href": "#cases",
+      "linkTitle": "Casos prácticos",
+      "isPost": true
+    },
+    {
+      "position": "3",
+      "title": "css",
+      "href": "#css",
+      "linkTitle": "css",
+      "isPost": true
+    },
+    {
+      "position": "4",
+      "title": "js",
+      "href": "#js",
+      "linkTitle": "js",
+      "isPost": true
+    },
+    {
+      "position": "5",
+      "title": "Sobre mi",
+      "href": "#me",
+      "linkTitle": "Sobre mi",
+      "isPost": false
+    }
+  ],
+  "intro": {
+    "title": "Estas en la página de ",
+    "subtitle": "Condrado"
+  },
+  "posts": [
+    {}
+  ],
+  "listPostCss": {
+    "id": "css",
+    "title": "css",
+    "list": [
+      {
+        "hrefLink": "#",
+        "title": "Unidades",
+        "src": "../build/assets/images/pic01.jpg",
+        "text": "Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.",
+        "hrefAction": "generic.html",
+        "textAction": "leer más"
+      },
+      {
+        "hrefLink": "#",
+        "title": "Flexbox",
+        "src": "../build/assets/images/pic02.jpg",
+        "text": "Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.",
+        "hrefAction": "generic.html",
+        "textAction": "leer más"
+      },
+      {
+        "hrefLink": "#",
+        "title": "Position absolute, relative, fixed y static",
+        "src": "../build/assets/images/pic03.jpg",
+        "text": "Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.",
+        "hrefAction": "generic.html",
+        "textAction": "leer más"
+      }
+    ]
+  },
+  "listPostJs": {
+    "id": "js",
+    "title": "javascript",
+    "list": [
+      {
+        "hrefLink": "#",
+        "title": "Sed ipsum dolor",
+        "src": "../build/assets/images/pic01.jpg",
+        "text": "Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.",
+        "hrefAction": "generic.html",
+        "textAction": "leer más"
+      },
+      {
+        "hrefLink": "#",
+        "title": "Sed ipsum dolor",
+        "src": "../build/assets/images/pic02.jpg",
+        "text": "Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.",
+        "hrefAction": "generic.html",
+        "textAction": "leer más"
+      },
+      {
+        "hrefLink": "#",
+        "title": "Sed ipsum dolor",
+        "src": "../build/assets/images/pic03.jpg",
+        "text": "Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.",
+        "hrefAction": "generic.html",
+        "textAction": "leer más"
+      }
+    ]
+  },
+  "listPostCases": {
+    "id": "cases",
+    "title": "Casos prácticos",
+    "list": [
+      {
+        "hrefLink": "#",
+        "title": "Sed ipsum dolor",
+        "src": "../build/assets/images/pic01.jpg",
+        "text": "Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.",
+        "hrefAction": "generic.html",
+        "textAction": "leer más"
+      },
+      {
+        "hrefLink": "#",
+        "title": "Sed ipsum dolor",
+        "src": "../build/assets/images/pic02.jpg",
+        "text": "Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.",
+        "hrefAction": "generic.html",
+        "textAction": "leer más"
+      },
+      {
+        "hrefLink": "#",
+        "title": "Sed ipsum dolor",
+        "src": "../build/assets/images/pic03.jpg",
+        "text": "Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.",
+        "hrefAction": "generic.html",
+        "textAction": "leer más"
+      }
+    ]
+  },
+  "formAdmin": {
+    "labTheme": "Tema",
+    "labTitle": "Título",
+    "placeholderTitle": "Inserte un título",
+    "labContent": "Contenido",
+    "labImg": "Imagen",
+    "textAreaRow": "12",
+    "labContentJson": "Pulse para copiar JSON",
+    "textAreaJsonRow": "1"
+  },
+  "pages": [
+    {
+      "id": "page-20200403130101",
+      "hrefLink": "#",
+      "labImg": "../build/assets/images/pic01.jpg",
+      "labId": "#css",
+      "labTheme": "Css",
+      "labTitle": "e",
+      "labContent": "d"
+    },
+    {
+      "id": "page-20200403130201",
+      "hrefLink": "#",
+      "labImg": "../build/assets/images/pic01.jpg",
+      "labId": "#js",
+      "labTheme": "JavaScript",
+      "labTitle": "e",
+      "labContent": "d"
+    },
+    {
+      "id": "page-20200403130301",
+      "hrefLink": "#",
+      "labImg": "../build/assets/images/pic01.jpg",
+      "labId": "#cases",
+      "labTheme": "Casos prácticos",
+      "labTitle": "e",
+      "labContent": "d"
+    },
+    {
+      "id": "page-20200403130401",
+      "hrefLink": "#",
+      "labImg": "../build/assets/images/pic01.jpg",
+      "labId": "#css",
+      "labTheme": "Css",
+      "labTitle": "e",
+      "labContent": "d"
+    },
+    {
+      "id": "page-20200403205820",
+      "labId": "#css",
+      "labTheme": "css",
+      "labTitle": "Tipo de position",
+      "hrefLink": "tipo-position",
+      "labSummary": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto",
+      "labContent": "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architectoSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architectoSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architectoSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architectoSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architectoSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architectoSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto</p>",
+      "labImg": "../build/assets/images/post-01.jpg"
+    }
+  ]
+}

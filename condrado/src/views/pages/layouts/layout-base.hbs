@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <title>
+      {{#if title}}
+        {{title}}
+      {{else}}
+        Base Page Title
+      {{/if}}
+    </title>
+    {{#> head}}{{/head}}
+  </head>
+  <body class="is-preload crr-page__base">
+  
+  <header id="header" class="crr-header">
+    <a href="./" class="title">{{intro.subtitle}}</a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="generic.html">Generic</a></li>
+        <li><a href="elements.html"  class="active">Elements</a></li>
+      </ul>
+    </nav>
+  </header>
+    
+  {{#> sidebar}}{{/sidebar}}
+  
+  <main id="wrapper" class="crr-main">
+    {{#> main}}{{/main}}
+  </main>  
+  
+  {{#> footer}}{{/footer}}
+  
+  {{#> scripts}}{{/scripts}}
+  </body>
+</html>
+

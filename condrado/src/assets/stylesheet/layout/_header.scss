@@ -1,0 +1,93 @@
+///
+/// Hyperspace by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Header */
+
+	.crr-header {
+		@include vendor('display', 'flex');
+		background-color: _palette(gre-01);
+		cursor: default;
+		padding: 1.75rem 2rem;
+
+		> .title {
+			border: 0;
+			color: _palette(gre-11);
+			display: block;
+			font-size: 1.25rem;
+			font-weight: _font(weight);
+      text-decoration: none;
+		}
+
+		> nav {
+			@include vendor('flex', '1');
+			text-align: right;
+
+			> ul {
+				margin: 0;
+				padding: 0;
+
+				> li {
+					display: inline-block;
+					margin-left: 1.75rem;
+					padding: 0;
+					vertical-align: middle;
+
+					&:first-child {
+						margin-left: 0;
+					}
+
+					a {
+						border: 0;
+						color: _palette(gre-11);;
+						display: inline-block;
+						font-size: 0.6rem;
+						font-weight: _font(weight-bold);
+						text-transform: uppercase;
+            text-decoration: none;
+
+						&:hover {
+							color: _palette(gre-11);
+						}
+
+						&.active {
+							color: _palette(gre-11);
+						}
+					}
+				}
+			}
+		}
+
+		@include breakpoint('<=small') {
+			padding: 1rem 2rem;
+		}
+
+		@include breakpoint('<=xsmall') {
+			display: block;
+			padding: 0 2rem;
+			text-align: left;
+
+			.title {
+				font-size: 1.25rem;
+				padding: 1rem 0;
+			}
+
+			> nav {
+				border-top: solid 1px _palette(border);
+				text-align: inherit;
+
+				> ul {
+					> li {
+						margin-left: 1.5rem;
+
+						a {
+							height: 6rem;
+							line-height: 6rem;
+						}
+					}
+				}
+			}
+		}
+	}

@@ -1,0 +1,70 @@
+// Misc.
+	$misc: (
+		z-index-base:		    10000,
+		max-features:		    20,
+		max-sidebar-links:	20
+	);
+
+// Duration.
+	$duration: (
+		transition:			    0.2s,
+		activation:			    1s
+	);
+
+// Size.
+	$size: (
+		border-radius:		  0.25rem,
+		border-width:		    1px,
+		element-height:		  2.75rem,
+		element-margin:		  2rem,
+		sidebar-width:		  18rem,
+		sidebar-height:		  3.5rem,	// when <=large is active
+		inner-width:		    75rem
+	);
+
+// Font.
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+	$font: (
+		family:				      ('Open Sans', sans-serif),
+		family-fixed:		    ('Courier New', monospace),
+    ligth:              300,
+		weight:				      400,
+		weight-bold:		    700,
+		kerning-alt:		    0.25rem
+	);
+
+// Palette.
+	$palette: (
+		bg:					        #ffffff,
+		bg-alt:				      darken(#312450, 5),
+		fg:					        #4b4b4b,
+		fg-bold:			      #ffffff,
+		fg-light:			      rgba(255,255,255,0.35),
+		border:				      #ababab,
+    border-bg:		      rgba(255,255,255,0.05),
+		accent1:			      #5e42a6,
+		accent1-alt:	      darken(#5e42a6, 10),
+		accent2:			      #ffffff,
+		accent2-alt:	      darken(#ffffff, 10),
+		accent3:			      #b74e91,
+		accent3-alt:	      darken(#b74e91, 10),
+    accent4:			      #1E354F,
+    accent4-alt:	      darken(#1E354F, 10),
+    accent5:			      #354A62,
+    accent5-alt:	      darken(#354A62, 10),
+    // GRAYSCALE
+    white:              #ffffff,
+    gre-01:             #eeeeee,
+    gre-02:             #dddddd,
+    gre-03:             #cccccc,
+    gre-04:             #bbbbbb,
+    gre-05:             #ababab,
+    gre-06:             #9b9b9b,
+    gre-07:             #7f7f7f,
+    gre-08:             #656565,
+    gre-09:             #4b4b4b,
+    gre-10:             #333333,
+    gre-11:             #1d1d1d,
+    black:              #000000
+	);
+

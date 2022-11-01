@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>conrado-card</title>
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" value="Webpack basic starter project">
+    <meta name="Description" content="A simple webpack starter project for your basic web development needs."/>
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Webpack basic starter project" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://lifenautjoe.github.io/webpack-starter-basic/" />
+    <meta property="og:image" content="https://i.snag.gy/i3eMBc.jpg" />
+    <meta property="og:description" content="A simple webpack starter project for your basic web development needs." />
+    <!-- Mobile header color for Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#ff4970">
+    <!-- Mobile header color Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#ff4970">
+    <!-- Mobile header color for iOS Safari (supports black, black-translucent or default) -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link href="https://fonts.googleapis.com/css2?family=Overlock&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="card">
+    <div class="card___container">
+        <div class="card__overview">
+            <div id="page-1" class="card__page active">
+                <section class="card__section">
+                    <figure class="card__figure">
+                        <img class="card__photo" src="<%= require('./src/assets/conrado.jpg') %>" alt="Fotagrafia de Conrado Ramos">
+                    </figure>
+                    
+                    <div class="card__content">
+                        <h1 class="card__heading">Conrado Ramos Rivas</h1>
+
+                        <p class="card__text">
+                            Mi nombre es Conrado. Actualmente vivo en Madrid y me encanta andar y disfrutar de la ciudad.
+                        </p>
+                        <p class="card__text">
+                            Me dedico al desarrollo web y llevo mas de 11 años disfrutando de mi trabajo. Si queres saber más de mis trabajos, recomendaciones y trucos en el mundo web no dudes en pulsar en la seeción que mas te interese.
+                        </p>
+                        <p class="card__text">
+                            Por cierto, ¡muchas gracias por visitarme!
+                        </p>
+                    </div>
+
+                    <div class="card__footer">
+                        <a href="#" id="works-click"  data-page="2" class="c-btn c-btn--primary c-btn--return">
+                            Continuar
+                        </a>
+                    </div>
+                </section>
+            </div>
+            <div id="page-2" class="card__page">
+                <section class="card__section">
+                    <h2 class="card__heading">Pagina 2</h2>
+
+                    <div class="card__content">
+                        <a href="#" data-page="3" class="c-btn--return">proyectos</a>
+                    </div>
+
+                    <div class="card__footer">
+                        <a href="#" id="return-click" data-page="1" class="c-btn c-btn--primary c-btn--return">
+                            Volver
+                        </a>
+                    </div>
+                </section>
+            </div>
+            <div id="page-3" class="card__page">
+                <section class="card__section">
+                    <h2 class="card__heading">Proyectos</h2>
+
+                    <div class="card__content">
+                        <div id="timeline" class="timeline">
+
+                        </div>
+                        <div class="timeline">
+                            <div class="timeline__company">
+                                <h3 class="timeline__title">Everis</h3>
+
+                                <div class="timeline__event">
+                                    <div class="timeline__content">
+                                        <p  class="timeline__date">
+                                            Feb. 2013
+                                        </p>
+                                        <h3 class="timeline__subtitle">Santander</h3>
+                                        <p class="timeline__description"></p>
+                                    </div>
+                                    <img class="timeline__img" src="<%= require('./src/assets/proyects/santader-logo.jpg') %>" alt="Santander">
+                                </div>
+                                <div class="timeline__event">
+                                    <div class="timeline__content">
+                                        <p  class="timeline__date">
+                                            Dic. 2014
+                                        </p>
+                                        <h3 class="timeline__subtitle">Endesa</h3>
+                                        <p class="timeline__description"></p>
+                                    </div>
+                                    <img class="timeline__img" src="<%= require('./src/assets/proyects/endesa-logo.jpg') %>" alt="Endesa">
+                                </div>
+                                <div class="timeline__event">
+                                    <div class="timeline__content">
+                                        <p  class="timeline__date">
+                                            May. 2015
+                                        </p>
+                                        <h3 class="timeline__subtitle">Ferrovial FORO</h3>
+                                        <p class="timeline__description"></p>
+                                    </div>
+                                    <img class="timeline__img" src="<%= require('./src/assets/proyects/ferrovial-logo.jpg') %>" alt="Ferrovial FORO">
+                                </div>
+                                <div class="timeline__event">
+                                    <div class="timeline__content">
+                                        <p  class="timeline__date">
+                                            May. 2015
+                                        </p>
+                                        <h3 class="timeline__subtitle">AGBAR - Sociedad General de Aguas de Barcelona</h3>
+                                        <p class="timeline__description"></p>
+                                    </div>
+                                    <img class="timeline__img" src="<%= require('./src/assets/proyects/agbar-logo.jpg') %>" alt="AGBAR - Sociedad General de Aguas de Barcelona">
+                                </div>
+                                <div class="timeline__event">
+                                    <div class="timeline__content">
+                                        <p  class="timeline__date">
+                                            May. 2015
+                                        </p>
+                                        <h3 class="timeline__subtitle">Telefónica - eKiss</h3>
+                                        <p class="timeline__description"></p>
+                                    </div>
+                                    <img class="timeline__img" src="<%= require('./src/assets/proyects/telefonica-logo.jpg') %>" alt="Telefónica - eKiss">
+                                </div>
+                                <div class="timeline__event">
+                                    <div class="timeline__content">
+                                        <p  class="timeline__date">
+                                            May. 2015
+                                        </p>
+                                        <h3 class="timeline__subtitle">PAe</h3>
+                                        <p class="timeline__description"></p>
+                                    </div>
+                                    <img class="timeline__img" src="<%= require('./src/assets/proyects/pae-logo.jpg') %>" alt="PAe">
+                                </div>
+                                <div class="timeline__event">
+                                    <div class="timeline__content">
+                                        <p  class="timeline__date">
+                                            May. 2015
+                                        </p>
+                                        <h3 class="timeline__subtitle">PAe - Sistema de Información Administrativa (SIA)</h3>
+                                        <p class="timeline__description"></p>
+                                    </div>
+                                    <img class="timeline__img" src="<%= require('./src/assets/proyects/sia-logo.jpg') %>" alt="PAe - Sistema de Información Administrativa (SIA)">
+                                </div>
+                                <div class="timeline__event">
+                                    <div class="timeline__content">
+                                        <p  class="timeline__date">
+                                            May. 2015
+                                        </p>
+                                        <h3 class="timeline__subtitle">PAe - Ventanilla Única de Servicios (VUDS)</h3>
+                                        <p class="timeline__description"></p>
+                                    </div>
+                                    <img class="timeline__img" src="<%= require('./src/assets/proyects/pae-logo.jpg') %>" alt="PAe - Ventanilla Única de Servicios (VUDS)">
+                                </div>
+                                <div class="timeline__event">
+                                    <div class="timeline__content">
+                                        <p  class="timeline__date">
+                                            May. 2015
+                                        </p>
+                                        <h3 class="timeline__subtitle">Ministerio de Sanidad, Consumo y Bienestar Social - Plataforma de Innovación Sanitaria (PINNSA)</h3>
+                                        <p class="timeline__description"></p>
+                                    </div>
+                                    <img class="timeline__img" src="<%= require('./src/assets/proyects/gob-esp-logo.jpg') %>" alt="Ministerio de Sanidad, Consumo y Bienestar Social - Plataforma de Innovación Sanitaria (PINNSA)">
+                                </div>
+                                <div class="timeline__event">
+                                    <div class="timeline__content">
+                                        <p  class="timeline__date">
+                                            May. 2015
+                                        </p>
+                                        <h3 class="timeline__subtitle">Asisa - Movilización Web</h3>
+                                        <p class="timeline__description"></p>
+                                    </div>
+                                    <img class="timeline__img" src="<%= require('./src/assets/proyects/asisa-logo.jpg') %>" alt="Asisa - Movilización Web">
+                                </div>
+                                <div class="timeline__event">
+                                    <div class="timeline__content">
+                                        <p  class="timeline__date">
+                                            Jun. 2015
+                                        </p>
+                                        <h3 class="timeline__subtitle">Asisa</h3>
+                                        <p class="timeline__description"></p>
+                                    </div>
+                                    <img class="timeline__img" src="<%= require('./src/assets/proyects/asisa-logo.jpg') %>" alt="Asisa">
+                                </div>
+                                <div class="timeline__event">
+                                    <div class="timeline__content">
+                                        <p  class="timeline__date">
+                                            Jun. 2015
+                                        </p>
+                                        <h3 class="timeline__subtitle">BBVA - COMPASS</h3>
+                                        <p class="timeline__description"></p>
+                                    </div>
+                                    <img class="timeline__img" src="<%= require('./src/assets/proyects/bbva-logo.jpg') %>" alt="BBVA - COMPASS">
+                                </div>
+                                <div class="timeline__event">
+                                    <div class="timeline__content">
+                                        <p  class="timeline__date">
+                                            Jun. 2015
+                                        </p>
+                                        <h3 class="timeline__subtitle">McDonald's </h3>
+                                        <p class="timeline__description"></p>
+                                    </div>
+                                    <img class="timeline__img" src="<%= require('./src/assets/proyects/mcdonnals-logo.jpg') %>" alt="McDonald's ">
+                                </div>
+                                <div class="timeline__event">
+                                    <div class="timeline__content">
+                                        <p  class="timeline__date">
+                                            Jun. 2015
+                                        </p>
+                                        <h3 class="timeline__subtitle">Ministerio de Hacienda y Administraciones Públicas - Carpeta Ciudadana (CC) </h3>
+                                        <p class="timeline__description"></p>
+                                    </div>
+                                    <img class="timeline__img" src="<%= require('./src/assets/proyects/gob-esp-logo.jpg') %>" alt="Ministerio de Hacienda y Administraciones Públicas - Carpeta Ciudadana (CC)">
+                                </div>
+                                <div class="timeline__event">
+                                    <div class="timeline__content">
+                                        <p  class="timeline__date">
+                                            Jun. 2015
+                                        </p>
+                                        <h3 class="timeline__subtitle">Mapfre - Tarificador autos móvil</h3>
+                                        <p class="timeline__description"></p>
+                                    </div>
+                                    <img class="timeline__img" src="<%= require('./src/assets/proyects/mapfre-logo.jpg') %>" alt="Mapfre - Tarificador autos móvil">
+                                </div>
+                                <div class="timeline__event">
+                                    <div class="timeline__content">
+                                        <p  class="timeline__date">
+                                            Jul. 2015
+                                        </p>
+                                        <h3 class="timeline__subtitle">Santader - CRP UK</h3>
+                                        <p class="timeline__description"></p>
+                                    </div>
+                                    <img class="timeline__img" src="<%= require('./src/assets/proyects/santader-logo.jpg') %>" alt="Santader - CRP UK">
+                                </div>
+                                <div class="timeline__event">
+                                    <div class="timeline__content">
+                                        <p  class="timeline__date">
+                                            Jul. 2015
+                                        </p>
+                                        <h3 class="timeline__subtitle">Mapfre - Adaptar web a árabe</h3>
+                                        <p class="timeline__description"></p>
+                                    </div>
+                                    <img class="timeline__img" src="<%= require('./src/assets/proyects/mapfre-logo.jpg') %>" alt="Mapfre - Adaptar web a árabe">
+                                </div>
+                                <div class="timeline__event">
+                                    <div class="timeline__content">
+                                        <p  class="timeline__date">
+                                            Ago. 2015
+                                        </p>
+                                        <h3 class="timeline__subtitle">OHL - Prevención de Riesgos Laborales</h3>
+                                        <p class="timeline__description"></p>
+                                    </div>
+                                    <img class="timeline__img" src="<%= require('./src/assets/proyects/ohl-logo.jpg') %>" alt="OHL - Prevención de Riesgos Laborales">
+                                </div>
+                                <div class="timeline__event">
+                                    <div class="timeline__content">
+                                        <p  class="timeline__date">
+                                            Ago. 2015
+                                        </p>
+                                        <h3 class="timeline__subtitle">Telefónica - Global IT</h3>
+                                        <p class="timeline__description"></p>
+                                    </div>
+                                    <img class="timeline__img" src="<%= require('./src/assets/proyects/telefonica-logo.jpg') %>" alt="Telefónica - Global IT">
+                                </div>
+                                <div class="timeline__event">
+                                    <div class="timeline__content">
+                                        <p  class="timeline__date">
+                                            Ago. 2015
+                                        </p>
+                                        <h3 class="timeline__subtitle">Cofares - Sección de Crédito</h3>
+                                        <p class="timeline__description"></p>
+                                    </div>
+                                    <img class="timeline__img" src="<%= require('./src/assets/proyects/cofares-logo.jpg') %>" alt="Cofares - Sección de Crédito">
+                                </div>
+                                <div class="timeline__event">
+                                    <div class="timeline__content">
+                                        <p  class="timeline__date">
+                                            Ago. 2015
+                                        </p>
+                                        <h3 class="timeline__subtitle">Mapfre - Tarificador de Decesos</h3>
+                                        <p class="timeline__description"></p>
+                                    </div>
+                                    <img class="timeline__img" src="<%= require('./src/assets/proyects/mapfre-logo.jpg') %>" alt="Mapfre - Tarificador de Decesos">
+                                </div>
+                                <div class="timeline__event">
+                                    <div class="timeline__content">
+                                        <p  class="timeline__date">
+                                            Sep. 2015
+                                        </p>
+                                        <h3 class="timeline__subtitle">Xunta Galicia - Notific@</h3>
+                                        <p class="timeline__description"></p>
+                                    </div>
+                                    <img class="timeline__img" src="<%= require('./src/assets/proyects/xunta-galicia-logo.jpg') %>" alt="Xunta Galicia - Notific@">
+                                </div>
+                                <div class="timeline__event">
+                                    <div class="timeline__content">
+                                        <p  class="timeline__date">
+                                            Sep. 2015
+                                        </p>
+                                        <h3 class="timeline__subtitle">Securitas Direct - Bandeja de Entrada</h3>
+                                        <p class="timeline__description"></p>
+                                    </div>
+                                    <img class="timeline__img" src="<%= require('./src/assets/proyects/sd-logo.jpg') %>" alt="Securitas Direct - Bandeja de Entrada">
+                                </div>
+                                <div class="timeline__event">
+                                    <div class="timeline__content">
+                                        <p  class="timeline__date">
+                                            Sep. 2015
+                                        </p>
+                                        <h3 class="timeline__subtitle">Asisa - Mantenimiento web</h3>
+                                        <p class="timeline__description"></p>
+                                    </div>
+                                    <img class="timeline__img" src="<%= require('./src/assets/proyects/asisa-logo.jpg') %>" alt="Asisa - Mantenimiento web">
+                                </div>
+                                <div class="timeline__event">
+                                    <div class="timeline__content">
+                                        <p  class="timeline__date">
+                                            Sep. 2015
+                                        </p>
+                                        <h3 class="timeline__subtitle">Molton Brown - Auditoría Performance</h3>
+                                        <p class="timeline__description"></p>
+                                    </div>
+                                    <img class="timeline__img" src="<%= require('./src/assets/proyects/molton-brown-logo.jpg') %>" alt="Molton Brown - Auditoría Performance">
+                                </div>
+                                <div class="timeline__event">
+                                    <div class="timeline__content">
+                                        <p  class="timeline__date">
+                                            Sep. 2015
+                                        </p>
+                                        <h3 class="timeline__subtitle">Mapfre - Mecanización de encuestas de satisfacción de usuarios de negocio</h3>
+                                        <p class="timeline__description"></p>
+                                    </div>
+                                    <img class="timeline__img" src="<%= require('./src/assets/proyects/mapfre-logo.jpg') %>" alt="Mapfre - Mecanización de encuestas de satisfacción de usuarios de negocio">
+                                </div>
+                                <div class="timeline__event">
+                                    <div class="timeline__content">
+                                        <p  class="timeline__date">
+                                            Oct. 2015
+                                        </p>
+                                        <h3 class="timeline__subtitle">Mapfre - Ficha de cliente</h3>
+                                        <p class="timeline__description"></p>
+                                    </div>
+                                    <img class="timeline__img" src="<%= require('./src/assets/proyects/mapfre-logo.jpg') %>" alt="Mapfre - Ficha de cliente">
+                                </div>
+                                <div class="timeline__event">
+                                    <div class="timeline__content">
+                                        <p  class="timeline__date">
+                                            Oct. 2015
+                                        </p>
+                                        <h3 class="timeline__subtitle">Repsol - Nuevo Sistema de Gas Envasado (NSGE)</h3>
+                                        <p class="timeline__description"></p>
+                                    </div>
+                                    <img class="timeline__img" src="<%= require('./src/assets/proyects/repsol-logo.jpg') %>" alt="Repsol - Nuevo Sistema de Gas Envasado (NSGE)">
+                                </div>
+                                <div class="timeline__event">
+                                    <div class="timeline__content">
+                                        <p  class="timeline__date">
+                                            Oct. 2015
+                                        </p>
+                                        <h3 class="timeline__subtitle">Iberdrola - PoC</h3>
+                                        <p class="timeline__description"></p>
+                                    </div>
+                                    <img class="timeline__img" src="<%= require('./src/assets/proyects/iberdrola-logo.jpg') %>" alt="Iberdrola - PoC">
+                                </div>
+                                <div class="timeline__event">
+                                    <div class="timeline__content">
+                                        <p  class="timeline__date">
+                                            Oct. 2015
+                                        </p>
+                                        <h3 class="timeline__subtitle">El Corte Inglés - Qlik Sense</h3>
+                                        <p class="timeline__description"></p>
+                                    </div>
+                                    <img class="timeline__img" src="<%= require('./src/assets/proyects/elcorteingles-logo.jpg') %>" alt="El Corte Inglés - Qlik Sense">
+                                </div>
+                                <div class="timeline__event">
+                                    <div class="timeline__content">
+                                        <p  class="timeline__date">
+                                            Nov. 2015
+                                        </p>
+                                        <h3 class="timeline__subtitle">Allianz</h3>
+                                        <p class="timeline__description"></p>
+                                    </div>
+                                    <img class="timeline__img" src="<%= require('./src/assets/proyects/allianz-logo.jpg') %>" alt="Allianz">
+                                </div>
+                                <div class="timeline__event">
+                                    <div class="timeline__content">
+                                        <p  class="timeline__date">
+                                            Nov. 2015
+                                        </p>
+                                        <h3 class="timeline__subtitle">La Caixa - EduCaixa</h3>
+                                        <p class="timeline__description"></p>
+                                    </div>
+                                    <img class="timeline__img" src="<%= require('./src/assets/proyects/flc-logo.jpg') %>" alt="La Caixa - EduCaixa">
+                                </div>
+                                <div class="timeline__event">
+                                    <div class="timeline__content">
+                                        <p  class="timeline__date">
+                                            Dic. 2015
+                                        </p>
+                                        <h3 class="timeline__subtitle">Bancopopular-e - Migración de estilos</h3>
+                                        <p class="timeline__description"></p>
+                                    </div>
+                                    <img class="timeline__img" src="<%= require('./src/assets/proyects/bp-logo.jpg') %>" alt="Bancopopular-e - Migración de estilos">
+                                </div>
+                                <div class="timeline__event">
+                                    <div class="timeline__content">
+                                        <p  class="timeline__date">
+                                            Dic. 2015
+                                        </p>
+                                        <h3 class="timeline__subtitle">Endesa - Contenidos Avanzados</h3>
+                                        <p class="timeline__description"></p>
+                                    </div>
+                                    <img class="timeline__img" src="<%= require('./src/assets/proyects/endesa-logo.jpg') %>" alt="Endesa - Contenidos Avanzados">
+                                </div>
+                                <div class="timeline__event">
+                                    <div class="timeline__content">
+                                        <p  class="timeline__date">
+                                            Ene. 2016
+                                        </p>
+                                        <h3 class="timeline__subtitle">Bankia - Portal Único</h3>
+                                        <p class="timeline__description"></p>
+                                    </div>
+                                    <img class="timeline__img" src="<%= require('./src/assets/proyects/bankia-logo.jpg') %>" alt="Bankia - Portal Único">
+                                </div>
+                                <div class="timeline__event">
+                                    <div class="timeline__content">
+                                        <p  class="timeline__date">
+                                            Sep. 2016
+                                        </p>
+                                        <h3 class="timeline__subtitle">Avantcard</h3>
+                                        <p class="timeline__description"></p>
+                                    </div>
+                                    <img class="timeline__img" src="<%= require('./src/assets/proyects/avantcard-logo.jpg') %>" alt="Avantcard">
+                                </div>
+                                <div class="timeline__event">
+                                    <div class="timeline__content">
+                                        <p  class="timeline__date">
+                                            Nov. 2016
+                                        </p>
+                                        <h3 class="timeline__subtitle">Mutua Madrileña – Chatbot</h3>
+                                        <p class="timeline__description"></p>
+                                    </div>
+                                    <img class="timeline__img" src="<%= require('./src/assets/proyects/mutua-logo.jpg') %>" alt="Mutua Madrileña – Chatbot">
+                                </div>
+                                <div class="timeline__event">
+                                    <div class="timeline__content">
+                                        <p  class="timeline__date">
+                                            Dic. 2016
+                                        </p>
+                                        <h3 class="timeline__subtitle">Homeserve</h3>
+                                        <p class="timeline__description"></p>
+                                    </div>
+                                    <img class="timeline__img" src="<%= require('./src/assets/proyects/homeserve-logo.jpg') %>" alt="Homeserve">
+                                </div>
+                                <div class="timeline__event">
+                                    <div class="timeline__content">
+                                        <p  class="timeline__date">
+                                            Ene. 2017
+                                        </p>
+                                        <h3 class="timeline__subtitle">Orange – Guía de componentes</h3>
+                                        <p class="timeline__description"></p>
+                                    </div>
+                                    <img class="timeline__img" src="<%= require('./src/assets/proyects/orange-logo.jpg') %>" alt="Orange – Guía de componentes">
+                                </div>
+                                <div class="timeline__event">
+                                    <div class="timeline__content">
+                                        <p  class="timeline__date">
+                                            Sep. 2017
+                                        </p>
+                                        <h3 class="timeline__subtitle">Orange – ViveOrange</h3>
+                                        <p class="timeline__description"></p>
+                                    </div>
+                                    <img class="timeline__img" src="<%= require('./src/assets/proyects/orange-logo.jpg') %>" alt="Orange – ViveOrange">
+                                </div>
+                                <div class="timeline__event">
+                                    <div class="timeline__content">
+                                        <p  class="timeline__date">
+                                            Feb. 2018
+                                        </p>
+                                        <h3 class="timeline__subtitle">Banca March</h3>
+                                        <p class="timeline__description"></p>
+                                    </div>
+                                    <img class="timeline__img" src="<%= require('./src/assets/proyects/banca-march-logo.jpg') %>" alt="Banca March">
+                                </div>
+                                <div class="timeline__event">
+                                    <div class="timeline__content">
+                                        <p  class="timeline__date">
+                                            Oct. 2018
+                                        </p>
+                                        <h3 class="timeline__subtitle">Iberia</h3>
+                                        <p class="timeline__description"></p>
+                                    </div>
+                                    <img class="timeline__img" src="<%= require('./src/assets/proyects/iberia-logo.jpg') %>" alt="Iberia">
+                                </div>
+                                <div class="timeline__event">
+                                    <div class="timeline__content">
+                                        <p  class="timeline__date">
+                                            Oct. 2018
+                                        </p>
+                                        <h3 class="timeline__subtitle">Liberty Seguros – Mantenimiento web</h3>
+                                        <p class="timeline__description">Proyecto realizado con React</p>
+                                    </div>
+                                    <img class="timeline__img" src="<%= require('./src/assets/proyects/liberty-logo.jpg') %>" alt="Liberty Seguros – Mantenimiento web">
+                                </div>
+                                <div class="timeline__event">
+                                    <div class="timeline__content">
+                                        <p  class="timeline__date">
+                                            Nov. 2018
+                                        </p>
+                                        <h3 class="timeline__subtitle">Leroy Merlin - Singapur</h3>
+                                        <p class="timeline__description">Proyecto realizado con Angular 6</p>
+                                    </div>
+                                    <img class="timeline__img" src="<%= require('./src/assets/proyects/leroy-merlin-logo.jpg') %>" alt="Leroy Merlin - Singapur">
+                                </div>
+                                <!-- <div class="timeline__event">
+                                    <div class="timeline__content">
+                                        <p  class="timeline__date">
+                                            Feb. 2013 - Dic. 2014
+                                        </p>
+                                        <h3 class="timeline__subtitle"></h3>
+                                        <p class="timeline__description"></p>
+                                    </div>
+                                    <img class="timeline__img" src="<%= require('./src/assets/proyects/orange-logo.jpg') %>" alt="">
+                                </div> -->
+                            </div>
+
+                            
+                        </div>
+                    </div>
+
+                    <div class="card__footer">
+                        <a href="#" id="return-click" data-page="2" class="c-btn c-btn--primary c-btn--return">
+                            Volver
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <ul class="card__tags">
+            <li class="card__tag">
+                <a class="card__tag-link" target="_blank" href="https://codepen.io/condrado/pens/">Codepen</a>
+            </li>
+            <li class="card__tag">
+                <a class="card__tag-link" target="_blank" href="https://github.com/conradoTCK">Github</a>
+            </li>
+            <li class="card__tag">
+                <a class="card__tag-link" target="_blank" href="https://es.linkedin.com/in/conrado-ramos-rivas-36973230">Linkedin</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- <script async defer src="https://buttons.github.io/buttons.js"></script> -->
+</body>
+</html>

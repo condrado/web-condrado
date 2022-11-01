@@ -1,0 +1,102 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, button, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  border: 0;
+  font: _font(family);
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  line-height: normal;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  /* Disable horizontal scrollbar */
+  -ms-overflow-x: hidden;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: none;
+  &.is-active {
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+  }
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input:focus,
+select:focus,
+textarea:focus
+{
+  outline: none;
+}
+
+a,
+a:focus,
+a:active,
+a span,
+a:focus span,
+a:active span{
+  //text-decoration: none;
+}
+
+a:hover,
+a:hover span {
+  text-decoration: underline;
+}
+strong {
+  font: _font(weight-bold);
+}
+
+input {
+  border-radius: 0;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #1E354F inset;
+  color: _palette(gre-01);
+}
+

@@ -1,0 +1,128 @@
+.timeline {
+    margin: rem(16) 0;
+
+    &__event {
+        padding: rem(10);
+        margin-bottom: rem(16);
+        position: relative;
+        border: 1px solid $color-blue-02;
+        border-left-width: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &::after {
+            content: "";
+            border-top: 1px solid $color-blue-02;
+            width: rem(21);
+            height: rem(1);
+            position: absolute;
+            left: rem(-21);
+            top: calc(50% - .5px);
+            z-index: 1;
+            // -webkit-transform: rotate(45deg);
+            // -moz-transform: rotate(45deg);
+            // -o-transform: rotate(45deg);
+            // -ms-transform: rotate(45deg);
+            // transform: rotate(45deg);
+            background-color: $color-white;
+        }
+
+        &::before {
+            content: "";
+            width: rem(11);
+            height: rem(11);
+            background-color: $color-white;
+            border-radius: rem(11);
+            position: absolute;
+            left: rem(-30);
+            top: calc(50% - 5.5px);
+            border: 1px solid $color-blue-02;
+            z-index: 2;
+        }
+
+        &:last-child {
+            &::after {
+                background-color: $color-white;
+                width: rem(21);
+                left: rem(-25);
+                height: calc(50% + 2px);
+            }
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__company {
+        position: relative;
+        margin-bottom: rem(30);
+        overflow: hidden;
+        padding: 0 rem(16) 0 rem(45);
+
+        &::after {
+            content: "";
+            border-left: 1px solid $color-blue-02;
+            height: 100%;
+            display: block;
+            width: 1px;
+            position: absolute;
+            left: rem(24);
+            top: rem(50);
+        }
+    }
+
+    &__content {
+        display: inline-block;
+        width: calc(100% - 120px);
+    }
+
+    &__title {
+        margin: 0 0 rem(16) rem(-8);
+        text-align: center;
+    }
+
+    &__year,
+    &__month {
+        display: block;
+        margin: 0 0 0 rem(-45);
+        border: 1px solid $color-blue-02;
+        padding: rem(7);
+        background-color: $color-white;
+        position: relative;
+        z-index: 1;
+        width: rem(50);
+        text-align: center;
+        margin-bottom: rem(10);
+    }
+
+    &__subtitle {
+        margin: 0;
+        font-size: rem(15);
+        padding-right: rem(10);
+    }
+
+    &__date {
+        font-size: rem(12);
+        margin: 0;
+        padding-bottom: rem(5);
+    }
+
+    &__description {
+        margin: 0 0 rem(16) 0;
+        padding-top: rem(5);
+        font-size: rem(14);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__img {
+        display: inline-block;
+        max-width: rem(115);
+        text-align: right;
+        width: auto;
+    }
+}

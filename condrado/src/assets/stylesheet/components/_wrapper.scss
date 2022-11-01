@@ -1,0 +1,153 @@
+///
+/// Hyperspace by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Wrapper */
+
+	.wrapper {
+		position: relative;
+
+		> .inner {
+			@include padding(2.5rem, 2.5rem);
+			max-width: 100%;
+			//width: _size(inner-width);
+
+			@include breakpoint('<=xlarge') {
+        @include padding(2.5rem, 2.5rem);
+			}
+
+			@include breakpoint('<=large') {
+				width: 100%;
+			}
+
+			@include breakpoint('<=small') {
+        @include padding(2.5rem, 2.5rem);
+			}
+		}
+
+		&.alt {
+			background-color: _palette(bg-alt);
+		}
+
+		&.style1 {
+			background-color: _palette(accent1);
+		}
+
+		&.style1-alt {
+			background-color: _palette(accent1-alt);
+		}
+
+		&.style2 {
+			background-color: _palette(gre-01);
+		}
+
+		&.style2-alt {
+			background-color: _palette(gre-01);
+		}
+
+		&.style3 {
+			background-color: _palette(accent3);
+		}
+
+		&.style3-alt {
+			background-color: _palette(accent3-alt);
+		}
+
+    &.style4 {
+      background-color: _palette(accent4);
+    }
+
+    &.style4-alt {
+      background-color: _palette(accent4-alt);
+    }
+
+		&.fullscreen {
+			@include vendor('display', 'flex');
+			@include vendor('flex-direction', 'column');
+			@include vendor('justify-content', 'center');
+			min-height: 100vh;
+
+			body.is-ie & {
+				height: 100vh;
+			}
+
+			@include breakpoint('<=large') {
+				min-height: calc(100vh - 2.5rem);
+
+				body.is-ie & {
+					height: calc(100vh - 2.5rem);
+				}
+			}
+
+			@include breakpoint('<=small') {
+				padding: 2rem 0;
+				min-height: 0;
+
+				body.is-ie & {
+					height: auto;
+				}
+			}
+		}
+
+		&.fade-up {
+      min-height: 100vh;
+
+			> .inner {
+				@include vendor('transform', 'translateY(0)');
+				@include vendor('transition', (
+					'opacity #{_duration(activation)} ease',
+					'transform #{_duration(activation)} ease'
+				));
+				opacity: 1.0;
+
+        @include breakpoint('<=small') {
+         padding: 4rem 1rem 1.5rem;
+        }
+			}
+
+			&.inactive,
+			body.is-preload & {
+				> .inner {
+					opacity: 0;
+					@include vendor('transform', 'translateY(1rem)');
+				}
+			}
+		}
+
+		&.fade-down {
+			> .inner {
+				@include vendor('transform', 'translateY(0)');
+				@include vendor('transition', (
+					'opacity #{_duration(activation)} ease',
+					'transform #{_duration(activation)} ease'
+				));
+				opacity: 1.0;
+			}
+
+			&.inactive,
+			body.is-preload & {
+				> .inner {
+					opacity: 0;
+					@include vendor('transform', 'translateY(-1rem)');
+				}
+			}
+		}
+
+		&.fade {
+			> .inner {
+				@include vendor('transition', (
+					'opacity #{_duration(activation)} ease'
+				));
+				opacity: 1.0;
+			}
+
+			&.inactive,
+			body.is-preload & {
+				> .inner {
+					opacity: 0;
+				}
+			}
+		}
+	}

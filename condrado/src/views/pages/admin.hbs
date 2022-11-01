@@ -1,0 +1,180 @@
+{{#> layouts/layout-base title="Index" }}
+
+  {{#*inline "head"}}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/app.css">
+  {{/inline}}
+
+  {{#*inline "header"}}
+  {{/inline}}
+
+  {{#*inline "main"}}
+    <section class="wrapper">
+      <div class="inner">
+        <form id="form-admin" class="crr-form" method="post" action="#">
+          <fieldset>
+            <legend>Que deseas crear</legend>
+            <div class="row">
+              <div class="col-12">
+                <div class="crr-form__btn-box">
+                  <div class="crr-form__btn-box--left">
+                    <input type="button" data-form="newPost" value="Post" class="primary crr-form__btn-new" />
+                    <input type="button" data-form="newTheme" value="Tema" class="primary crr-form__btn-new" />
+                  </div>
+                  <div class="crr-form__btn-box--right">
+                    <a  id="btnCopyJSON" href="#" class="button primary">Copiar JSON</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset id="newPost" class="crr-form__fieldset">
+            <div class="row gtr-uniform">
+              <div class="col-3">
+                <label>
+                  <span>{{formAdmin.labTheme}}</span>
+                  <select name="labId" id="labId">
+                  </select>
+                </label>
+              </div>
+              <div class="col-8">
+                <label>
+                  <span>{{formAdmin.labTitle}}</span>
+                  <input type="text" autocomplete="off" name="labTitle" id="labTitle" value="" placeholder="{{formAdmin.placeholderTitle}}" />
+                </label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-6">
+                <label>
+                  <span>Nombre de la página</span>
+                  <input type="text" autocomplete="off" name="hrefLink" id="href" value="" placeholder="{{formAdmin.placeholderTitle}}" />
+                </label>
+              </div>
+            </div>
+          
+            <div class="row">
+              <div class="col-12">
+                <label>
+                  <span>Resumen</span>
+                  <textarea name="labSummary" id="labSummary" placeholder="Inserte un resumen del post" rows="2"></textarea>
+                </label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <label>
+                  <span>{{formAdmin.labContent}}</span>
+                  <textarea name="labContent" id="labContent" placeholder="Contenido del post" rows="{{formAdmin.textAreaRow}}"></textarea>
+                  <a class="icon-resize-full" href="" target="" title=""></a>
+                  <a class="icon-cog" href="http://demo.showdownjs.com/" target="_blank" title=""></a>
+                </label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-8">
+                <label>
+                  <span>{{formAdmin.labImg}}</span>
+                  <input type="file" name="labImg" id="labImg" value="" placeholder="{{formAdmin.placeholderTitle}}" />
+                </label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <ul class="actions">
+                  <li><input type="submit" value="Crear JSON" class="primary" /></li>
+                  <li><input type="reset" value="Reset" /></li>
+                </ul>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset id="newTheme" class="crr-form__fieldset">
+            <div class="row gtr-uniform">
+              <div class="col-1">
+                <label>
+                  <span>Position</span>
+                  <input type="text" autocomplete="off" name="position" id="position" placeholder="{{formAdmin.placeholderTitle}}" />
+                </label>
+              </div>
+              <div class="col-3">
+                <label>
+                  <span>Título</span>
+                  <input type="text" autocomplete="off" name="title" id="title" placeholder="{{formAdmin.placeholderTitle}}" />
+                </label>
+              </div>
+              <div class="col-2">
+                <label>
+                  <span>Href</span>
+                  <input type="text" autocomplete="off" name="href" id="href" placeholder="{{formAdmin.placeholderTitle}}" />
+                </label>
+              </div>
+              <div class="col-3">
+                <label>
+                  <span>Título del link</span>
+                  <input type="text" autocomplete="off" name="linkTitle" id="linkTitle" placeholder="{{formAdmin.placeholderTitle}}" />
+                </label>
+              </div>
+              <div class="col-2">
+                <div class="crr-form__checkbox">
+                  <input type="checkbox" id="isPost" name="isPost">
+                  <label for="isPost">Es post</label>
+                </div>
+              </div>
+              <div class="col-1">
+                <ul class="actions crr-form__btn-box">
+                  <li>
+                    <a class="crr-form__btn-action icon-plus" href="#" ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="row">
+              <div class="table-wrapper col-12">
+              <table class="crr-table crr-table--theme">
+                <thead>
+                <tr>
+                  <th>Título</th>
+                  <th>Href</th>
+                  <th>Título enlace</th>
+                  <th>Es Post</th>
+                  <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+            </div>
+          </fieldset>
+          <fieldset id="copyJson" class="crr-form__fieldset--copy">
+            <textarea class="crr-form__copy" id="labContentJson" placeholder="Nuevo Json" rows="{{formAdmin.textAreaJsonRow}}"></textarea>
+          </fieldset>
+        </form>
+      </div>
+    </section>
+  {{/inline}}
+
+  {{#*inline "footer"}}
+    <footer id="footer" class="wrapper">
+      <div class="inner">
+        <ul class="menu">
+          <li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+      </div>
+    </footer>
+  {{/inline}}
+
+
+  {{#*inline "scripts"}}
+    <script src="assets/javascript/libs/jquery.min.js"></script>
+    <script src="assets/javascript/libs/jquery.scrollex.min.js"></script>
+    <script src="assets/javascript/libs/jquery.scrolly.min.js"></script>
+    <script src="assets/javascript/libs/browser.min.js"></script>
+    <script src="assets/javascript/libs/breakpoints.min.js"></script>
+    <script src="assets/javascript/libs/showdown.min.js"></script>
+    <script src="assets/javascript/app.js"></script>
+  {{/inline}}
+
+{{/ layouts/layout-base }}

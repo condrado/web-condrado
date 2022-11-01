@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <title>
+      {{#if title}}
+        {{title}}
+      {{else}}
+        Base Page Title
+      {{/if}}
+    </title>
+    {{#> head}}{{/head}}
+  </head>
+  <body class="is-preload">
+  {{#> header}}{{/header}}
+  {{#> sidebar}}{{/sidebar}}
+  
+  <main id="wrapper" class="crr-main">
+    {{#> main}}{{/main}}
+  </main>  
+  
+  {{#> footer}}{{/footer}}
+  
+  {{#> scripts}}{{/scripts}}
+  </body>
+</html>
+

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/app.css">
+  </head>
+  <body class="chuleta">
+    <div class="chuleta__body">
+
+      <div class="chuleta__box">
+
+        <h2>Configuracion inicial</h2>
+
+        <div class="chuleta__box">
+          <h3>Global</h3>
+          <pre><code>git config --global user.name "Alex Gonzalez"
+git config --global user.email miemail@domain.cat
+git config --global color.diff auto
+git config --global color.status auto
+git config --global color.branch auto
+git config --global color.interactive auto
+
+git config --global core.editor "mate -w"
+ó
+git config --global core.editor "mvim -f"</code></pre>
+        </div>
+        <div class="chuleta__box">
+          <h3>Alias</h3>
+          <pre><code>git config --global alias.st status
+git config --global alias.ci commit
+git config --global alias.co checkout
+git config --global alias.br branch
+git config --global alias.lol "log --abbrev-commit --graph --decorate --all --pretty=oneline"</code></pre>
+        </div>
+      </div>
+
+      <div class="chuleta__box">
+        <h2>Ver ramas</h2>
+        <div class="chuleta__box">
+          <pre><code>git branch</code></pre>
+          <h3>Ver ramas incluyendo las remotas</h3>
+          <pre><code>git branch -a</code></pre>
+        </div>
+      </div>
+
+      <div class="chuleta__box">
+
+        <h2>Comandos Basicos</h2>
+
+        <div class="chuleta__box">
+          <h3>Ver Estado</h3>
+          <pre><code>git status</code></pre>
+        </div>
+        <div class="chuleta__box">
+          <h3>Añadir al working</h3>
+          <pre><code>git add .</code></pre>
+        </div>
+        <div class="chuleta__box">
+          <h3>Commit working</h3>
+          <pre><code>git commit -m "comment"</code></pre>
+        </div>
+        <div class="chuleta__box">
+          <h3>Add y commit al working</h3>
+          <pre><code>git commit -a -m "comment"</code></pre>
+        </div>
+        <div class="chuleta__box">
+          <h3>Descartar todos los cambios</h3>
+          <pre><code>git reset --hard</code></pre>
+        </div>
+        <div class="chuleta__box">
+          <h3>Ver log con su SHA1_HASH</h3>
+          <pre><code>git log
+git log --pretty=oneline
+git log --graph</code></pre>
+        </div>
+        <div class="chuleta__box">
+          <h3>Borrar para siempre todo el historial hasta un punto</h3>
+          <pre><code>git reset --hard SHA1_HASH</code></pre>
+        </div>
+        <div class="chuleta__box">
+          <h3>Volver a un punto abriendo rama</h3>
+          <pre><code>git checkout SHA1_HASH</code></pre>
+        </div>
+      </div>
+
+      <div class="chuleta__box">
+
+
+      </div>
+      <div class="chuleta__box">
+        <h2>Bajarse una rama remota</h2>
+        <pre><code>git checkout -t nombre_remote/nombre_rama</code></pre>
+      </div>
+      <div class="chuleta__box">
+        <h3>Volver a la rama principal</h3>
+        <pre><code>git checkout master</code></pre>
+      </div>
+      <div class="chuleta__box">
+        <h3>Crear rama</h3>
+        <pre><code>git checkout -b nombre_rama</code></pre>
+      </div>
+      <div class="chuleta__box">
+        <h3>Volver a rama nombre</h3>
+        <pre><code>git checkout nombre_rama</code></pre>
+      </div>
+      <div class="chuleta__box">
+        <h3>Mezclar una rama de desarrollo "rama_tal" a la rama master</h3>
+        <pre><code>git checkout master
+      git merge rama_tal</code></pre>
+      </div>
+      <div class="chuleta__box">
+        <h3>Mezclar una rama de desarrollo "rama_tal" a la rama master dejando un solo commit</h3>
+        <pre><code>git checkout master
+      git merge --squash rama_tal
+      git commit -m</code></pre>
+      </div>
+      <div class="chuleta__box">
+        <h3>Solucionar conflictos</h3>
+        <pre><code>git mergetool</code></pre>
+      </div>
+      <div class="chuleta__box">
+        <h3>Borrar rama_tal</h3>
+        <pre><code>git branch -d rama_tal</code></pre>
+      </div>
+      <div class="chuleta__box">
+        <h3>Canviar nombre de la rama actual</h3>
+        <pre><code>git branch -m nuevo_nombre</code></pre>
+      </div>
+      <div class="chuleta__box">
+        <h3>Descartar cambio de un fichero</h3>
+        <pre><code>git checkout file file</code></pre>
+      </div>
+      <div class="chuleta__box">
+        <h3>Descargar proyecto</h3>
+        <pre><code>git clone git://sdf</code></pre>
+      </div>
+      <div class="chuleta__box">
+        <h2>Clone, indicando nombre del remote</h2>
+        <pre><code>git clone -o dropbox /Users/IT/Dropbox</code></pre>
+      </div>
+      <div class="chuleta__box">
+        <h3>Crear repositorio para aceptar push (servidor)</h3>
+        <pre><code>git --bare init</code></pre>
+      </div>
+      <div class="chuleta__box">
+        <h3>Crear enlace local para enviar a remote</h3>
+        <pre><code>git add remote dropbox /carpeta/dropbox</code></pre>
+      </div>
+      <div class="chuleta__box">
+        <h3>Crear remote ssh</h3>
+        <pre><code>git remote add motespgit ssh://usuariogit@motespgit/var/cache/git/IphoneMotor.git</code></pre>
+      </div>
+      <div class="chuleta__box">
+        <h3>Renombrar remote</h3>
+        <pre><code>git remote rename old_name new_name</code></pre>
+      </div>
+      <div class="chuleta__box">
+        <h3>Enviar al remoto dropbox</h3>
+        <pre><code>git push dropbox master</code></pre>
+      </div>
+      <div class="chuleta__box">
+        <h3>Actualizar local desde remoto una determinada rama</h3>
+        <pre><code>git pull dropbox master</code></pre>
+      </div>
+      <div class="chuleta__box">
+        <h3>Actualizar local desde remoto todas las ramas</h3>
+        <pre><code>git fetch dropbox</code></pre>
+      </div>
+      <div class="chuleta__box">
+        <h3>Solucionar conflictos</h3>
+        <pre><code>git checkout --ours -- &lt;file&gt;    # Obtener la versión del fichero en la rama actual
+      git checkout --theirs -- &lt;file&gt;  # Obtener la versión del fichero en la rama que se está fusionando con la actual</code></pre>
+      </div>
+      <div class="chuleta__box">
+        <h2>Tags</h2>
+        <div class="chuleta__box">
+          <h3>Ver tags</h3>
+          <pre><code>git tag</code></pre>
+        </div>
+        <div class="chuleta__box">
+          <h3>Añadir tag</h3>
+          <pre><code>git tag -a v1.4 -m 'version 1.4'</code></pre>
+        </div>
+        <div class="chuleta__box">
+          <h3>Ver todo referente a un tag</h3>
+          <pre><code>git show v0.3</code></pre>
+        </div>
+        <div class="chuleta__box">
+          <h3>External Merge and Diff Tools</h3>
+          <pre><code>http://progit.org/book/ch7-1.html</code></pre>
+        </div>
+      </div>
+      <div class="chuleta__box">
+        <h2>Stash <em>escondite</em></h2>
+        <div class="chuleta__box">
+          <h3>insertar en stash</h3>
+          <pre><code>git stash</code></pre>
+        </div>
+        <div class="chuleta__box">
+          <h3>recuperar stash</h3>
+          <pre><code>git stash apply</code></pre>
+        </div>
+        <div class="chuleta__box">
+          <h3>limpiar stash</h3>
+          <pre><code>git stash clean</code></pre>
+        </div>
+      </div>
+      <div class="chuleta__box">
+        <h2>Fusionar commits</h2>
+      </div>
+      <div class="chuleta__box">
+        <h2>Eliminar</h2>
+      </div>
+      <div class="chuleta__box">
+        <h2>Eliminar tag</h2>
+        <pre><code>git tag -d &lt;tag&gt;</code></pre>
+      </div>
+      <div class="chuleta__box">
+        <h2>Eliminar rama</h2>
+        <pre><code>git br -d &lt;rama&gt;</code></pre>
+      </div>
+      <div class="chuleta__box">
+        <h2>Eliminar tag/rama remota</h2>
+        <pre><code>git push dropbox :&lt;tag o rama&gt;</code></pre>
+      </div>
+      <div class="chuleta__box">
+        <h2>Eliminar tag que ya existe una rama con el mismo nombre</h2>
+        <pre><code>git push origin :refs/tags/&lt;tag&gt;</code></pre>
+      </div>
+      <div class="chuleta__box">
+        <h2>Eliminar rama que ya existe un tag con el mismo nombre</h2>
+        <pre><code>git push origin :refs/heads/&lt;rama&gt;</code></pre>
+      </div>
+
+    </div>
+  </body>
+</html>
